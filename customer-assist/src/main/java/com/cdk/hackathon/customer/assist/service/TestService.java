@@ -21,7 +21,7 @@ public class TestService {
 	public ProductDto get(String id) {
 		Product product = testRepository.findOne(id);
 		if( product != null) {
-			product.toProductView();
+			return product.toProductView();
 		}
 		return null;
 	}
