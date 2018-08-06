@@ -17,14 +17,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class AdService {
-
-
+    // Try commenting for build push
     @Autowired
     private AdRepository adRepository;
 
     @Autowired
     private RecommendationRepository recommendationRepository;
-
 
 
     public List<Recommendation> getRecommendations(String intent, int socialMediaTrends, List<String> customerNames) {
