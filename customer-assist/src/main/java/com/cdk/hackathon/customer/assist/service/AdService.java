@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @Service
 public class AdService {
 
-    static AtomicInteger id = new AtomicInteger(0);
+
     @Autowired
     private AdRepository adRepository;
 

@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Service
 public class SocialMediaService {
 
-    static AtomicInteger id = new AtomicInteger(10);
+
     @Autowired
     TwitterService twitterService;
 
