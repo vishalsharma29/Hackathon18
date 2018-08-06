@@ -1,12 +1,12 @@
 package com.cdk.hackathon.customer.assist.entity;
 
+import com.cdk.hackathon.customer.assist.dto.ProductDto;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.cdk.hackathon.customer.assist.dto.ProductDto;
 
 @Table
 @Entity
@@ -14,16 +14,16 @@ public class Product {
 
 	@Id
 	@GeneratedValue
-	private String id;
+	private Integer id;
 
 	@Column
 	private String name;
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -36,6 +36,6 @@ public class Product {
 	}
 
 	public ProductDto toProductView() {
-		return new ProductDto(id, name);
+		return new ProductDto(getId(), name);
 	}
 }

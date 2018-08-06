@@ -7,19 +7,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cdk.hackathon.customer.assist.dto.ProductDto;
-import com.cdk.hackathon.customer.assist.service.TestService;
+import com.cdk.hackathon.customer.assist.service.ProductService;
 
 @RestController
-public class TestController {
+public class ProductController {
 @Autowired
-private TestService testService;
+private ProductService productService;
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public void create() {
-		testService.create();
+		productService.create();
 	}
 	
 	@RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
 	public ProductDto get(@PathVariable("id") String id) {
-		return testService.get(id);
+		return productService.get(id);
 	}
+
 }

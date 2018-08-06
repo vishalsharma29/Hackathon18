@@ -2,20 +2,20 @@ package com.cdk.hackathon.customer.assist.dto;
 
 public class ProductDto {
 
-	private String id;
+	private Integer id;
 
 	private String name;
 
-	public ProductDto(String id, String name) {
+	public ProductDto(Integer id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 	
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
