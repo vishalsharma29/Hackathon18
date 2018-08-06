@@ -8,7 +8,7 @@ import com.cdk.hackathon.customer.assist.entity.Product;
 import com.cdk.hackathon.customer.assist.repository.TestRepository;
 
 @Service
-public class TestService {
+public class TestServiceImpl {
 	@Autowired
 	private TestRepository testRepository;
 	
@@ -19,7 +19,7 @@ public class TestService {
 	}
 	
 	public ProductDto get(String id) {
-		Product product = testRepository.findOne(id);
+		Product product = testRepository.findOne(Integer.parseInt(id));
 		if( product != null) {
 			return product.toProductView();
 		}
